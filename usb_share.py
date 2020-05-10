@@ -7,8 +7,8 @@ import os
 from watchdog.observers import Observer
 from watchdog.events import *
 
-CMD_MOUNT = "modprobe g_mass_storage file=/piusb.bin stall=0 ro=1"
-CMD_UNMOUNT = "modprobe -r g_mass_storage"
+CMD_MOUNT = "mount -a; modprobe g_mass_storage file=/piusb.bin stall=0 removable=y"
+CMD_UNMOUNT = "modprobe -r g_mass_storage; umount /mnt/usb_share"
 CMD_SYNC = "sync"
 
 WATCH_PATH = "/mnt/usb_share"
