@@ -1,7 +1,7 @@
 # Pi-Zero-USB-Gadget
 A hacked together guide for working WiFi USB storage on the [Pi Zero W](https://amzn.to/2U75sE1)
 
-Initially I started with the MagPi magazine's solution from [here](https://magpi.raspberrypi.org/articles/pi-zero-w-smart-usb-flash-drive) and the watchdog script from [here](http://rpf.io/usbzw).
+Initially I started with the MagPi magazine's solution from [here](https://magpi.raspberrypi.org/articles/pi-zero-w-smart-usb-flash-drive) and the watchdog script from [here](http://rpf.io/usbzw). Including tweaks discovered [here](https://raspberrypi.stackexchange.com/questions/90823/using-a-rpi-zero-to-build-a-wifi-usb-stick-with-modprobe-g-mass-storage).
 
 USB mass storage mode is accessible by the OTG port on the Pi Zero or via a USB-A expansion board like [this](https://amzn.to/2yIc0lc) one that I use.
 
