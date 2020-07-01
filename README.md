@@ -33,7 +33,7 @@ USB mass storage mode is accessible by the OTG port on the Pi Zero or via a USB-
 10. Creat the samba share in `/etc/samba/smb.conf`
 
 ```
-[usb]
+[zero_usb]
 browseable = yes
 path = /mnt/usb_share
 guest ok = yes
@@ -45,10 +45,11 @@ create mask = 777
 
 ## Setting up the watchdog script
 
-12. Install python watchdog with: `sudo pip3 install watchdog`
-13. Download and move the `usb_share.py` to somewhere sensible like `/usr/local/share`
-14. Make it executable with `sudo chmod +x usbshare.py`
-15. Automatically running watchdog
+12. Install Python 3 with: `sudo apt install python3`
+13. Install python watchdog with: `sudo pip3 install watchdog`
+14. Download and move the `usb_share.py` to somewhere sensible like `/usr/local/share`
+15. Make it executable with `sudo chmod +x /usr/local/share/usb_share.py`
+16. Automatically running watchdog
     - At this point, the original guide created a service. I would still rather use a service so please feel free to fork, add it it and make a pull-request
     - Instead, simply run the watchdog script at startup by adding it to the sudoers crontab by running `sudo crontab -e` and adding `@reboot sudo python3 /usr/local/share/usb_share.py`
 
